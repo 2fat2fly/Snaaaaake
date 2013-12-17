@@ -1,0 +1,46 @@
+//creating the canvas
+var canvas = document.createElement("canvas");
+var ctx = canvas.getContext("2d");
+var canvas.width = 512;
+var canvas.height = 512;
+document.body.appendChild(canvas);
+//background image
+var bgReady = false;
+var bgImage = new Image();
+bgImage.onLoad = function{
+          bgReady = true;
+          };
+bgImage.src = "src";
+//Snake image
+var snReady = false;
+var snImage = new Image();
+snImage.onLoad = function{
+          snReady = true;
+          };
+//apple image
+var appleReady = false;
+var appleImage = new Image();
+appleImage.onLoad = function{
+          appleReady = true;
+          };
+//game objects
+var snake = {
+speed: 200
+snakeLength:0
+};
+var apple = {};
+var applesEaten = 0;
+//Keyboard
+var Keysdown = {};
+addEventListiner("keydown", function(e){
+  keysDown[e.keyCode];
+  }, false);
+  //randomize the apple positionevery apple cought
+  var newApple = function(){
+  apple.x = Math.Random * canvas.Width;
+  apple.y = Math.Random * canvas.Height;
+  };
+  //Updating game objects
+  var update = function(modfier){
+  if(38 in keyDown)
+  
